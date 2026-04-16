@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Qase NPS Analysis</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;800&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    min-height: 100vh;
+    background: #0C0F1A;
+    color: #E8EAF0;
+    font-family: 'DM Sans', -apple-system, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container {
+    max-width: 720px;
+    width: 100%;
+    padding: 40px 28px;
+  }
+  .logo {
+    width: 52px; height: 52px; border-radius: 14px;
+    background: linear-gradient(135deg, #6C63FF, #4ECDC4);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px; font-weight: 800; color: #fff;
+    font-family: 'Space Grotesk', sans-serif;
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 32px; font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+  }
+  .subtitle {
+    font-size: 14px; color: #8B90A8; margin-bottom: 40px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  .card {
+    background: #141829;
+    border: 1px solid #252B45;
+    border-radius: 16px;
+    padding: 28px 24px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.25s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .card:hover {
+    border-color: #6C63FF;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(108, 99, 255, 0.12);
+  }
+  .card-accent {
+    width: 100%; height: 3px;
+    border-radius: 2px;
+    margin-bottom: 18px;
+  }
+  .card h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px; font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .card p {
+    font-size: 13px; color: #8B90A8;
+    line-height: 1.7; margin-bottom: 16px;
+  }
+  .stats {
+    display: flex; gap: 16px;
+  }
+  .stat-item {
+    text-align: center;
+  }
+  .stat-value {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 22px; font-weight: 800;
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #8B90A8;
+    margin-top: 4px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .arrow {
+    position: absolute;
+    bottom: 20px; right: 20px;
+    font-size: 20px; color: #252B45;
+    transition: all 0.25s ease;
+  }
+  .card:hover .arrow { color: #6C63FF; transform: translateX(4px); }
+  footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 12px;
+    color: #555A74;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  footer a { color: #6C63FF; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="logo">Q</div>
+  <h1>Qase NPS Analysis</h1>
+  <div class="subtitle">3,163 survey responses · Mar 2023 – Apr 2026</div>
+
+  <div class="cards">
+    <a class="card" href="all-time.html">
+      <div class="card-accent" style="background: linear-gradient(90deg, #6C63FF, #4ECDC4);"></div>
+      <h2>All-Time Analysis</h2>
+      <p>Complete dataset covering 2+ years of NPS feedback with segmentation, thematic clustering, and investment matrix.</p>
+      <div class="stats">
+        <div class="stat-item">
+          <div class="stat-value" style="color: #22C997;">+39.3</div>
+          <div class="stat-label">NPS</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">3,163</div>
+          <div class="stat-label">Responses</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">8.1</div>
+          <div class="stat-label">Avg Score</div>
+        </div>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+
+    <a class="card" href="last-12-months.html">
+      <div class="card-accent" style="background: linear-gradient(90deg, #F59E0B, #EF4444);"></div>
+      <h2>Last 12 Months</h2>
+      <p>Recent window showing NPS decline, monthly trends, new pain signals, and updated recommendations.</p>
+      <div class="stats">
+        <div class="stat-item">
+          <div class="stat-value" style="color: #F97316;">+24.6</div>
+          <div class="stat-label">NPS</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">882</div>
+          <div class="stat-label">Responses</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" style="color: #EF4444;">↓14.7</div>
+          <div class="stat-label">vs All-Time</div>
+        </div>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+  </div>
+
+  <footer>Analysis generated April 2026 · <a href="https://github.com/ndeshmukh-coder/qase-nps-analysis">View on GitHub</a></footer>
+</div>
+</body>
+</html>
